@@ -35,6 +35,10 @@ public class Array {
         int N = array.length;
         int[] newArray = new int[N];
 
+        /* The wrong way to copy the Array, which will make two alias point at the same Array address.
+        newArray = array;
+        */
+
         for (int i = 0; i < N; i++)
                 newArray[i] = array[i];
 
@@ -57,7 +61,6 @@ public class Array {
         for (int j = 0; j < N; j++)
                 System.out.print(array[j] + " ");
     }
-
 
     public static void main(String[] args)
     {
